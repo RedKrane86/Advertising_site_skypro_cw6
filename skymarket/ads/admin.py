@@ -12,4 +12,4 @@ class CommentAdmin(admin.ModelAdmin):
 @admin.register(Ad)
 class AdAdmin(admin.ModelAdmin):
 
-    list_display = ("pk", "author", "title", "price", "image")
+    list_display = ("pk", "author", "title", "price")
