@@ -19,6 +19,7 @@ class User(AbstractBaseUser):
     phone = PhoneNumberField()
     role = models.CharField(max_length=5, choices=UserRoles.choices, default=UserRoles.USER)
     image = models.ImageField(upload_to='avatars', null=True, blank=True)
+    is_active = models.BooleanField(default=True)
 
     @property
     def is_superuser(self):
